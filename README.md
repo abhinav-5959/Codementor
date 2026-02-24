@@ -1,73 +1,19 @@
-# Welcome to your Lovable project
+# Codementor – AI-Powered Python Execution & Optimization Platform
 
-## Project info
+Codementor is an AI-powered Python execution and optimization platform designed to securely run, analyze, and improve complex Python programs. Unlike traditional online compilers, Codementor goes beyond simple code execution by combining secure sandboxed execution, performance analysis, AI-driven optimization, and intelligent stress testing into a single integrated system. This project was built by Pulijala Abhinav.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Codementor executes Python programs inside isolated Docker containers to ensure security and reliability. The platform applies strict CPU and memory limits, enforces execution timeouts, prevents infinite loops, restricts network access, and blocks access to the host file system. This ensures that even complex or potentially unsafe code can be executed securely without affecting the underlying system. The execution engine supports multiple input() calls, multiline inputs, large datasets, recursive logic, object-oriented programming structures, and standard library imports. It also provides structured error reporting for SyntaxError, RuntimeError, RecursionError, MemoryError, and TimeoutError.
 
-## How can I edit this code?
+One of the core strengths of Codementor is its Live Complexity Estimator. Using static analysis through Python’s Abstract Syntax Tree (AST), the system evaluates the structure of the code without executing it. It detects nested loops, recursion patterns, sorting operations, and common algorithmic structures to estimate time and space complexity. The platform provides a complexity estimate along with reasoning and confidence level, helping developers understand the efficiency of their approach before running the program.
 
-There are several ways of editing your application.
+Codementor also includes a Performance Heatmap feature that performs line-by-line profiling of executed code. By integrating profiling tools such as cProfile or line-based profilers within the sandbox environment, the system identifies which lines of code consume the most execution time. The frontend visually highlights these lines, allowing users to pinpoint bottlenecks and optimize critical sections effectively. This transforms the platform into a lightweight performance debugging tool.
 
-**Use Lovable**
+Another powerful feature is the AI Code Optimization engine. The platform analyzes the user’s code to detect inefficient patterns and suggests improved data structures or algorithmic approaches. It generates an optimized version of the program and validates it by re-running all test cases to ensure output consistency. Performance metrics such as execution time and memory usage are compared between the original and optimized versions, and improvement percentages are calculated. The system also provides a clear explanation of why the optimized solution performs better.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Codementor further enhances reliability through its AI Stress Test Generator. The system automatically generates boundary cases, worst-case inputs, large datasets, empty inputs, and adversarial scenarios. Each generated test case includes an explanation of its purpose. The platform executes the user’s code against these stress tests to detect potential time limit exceeded (TLE) risks or memory inefficiencies, making it especially valuable for competitive programming and interview preparation.
 
-Changes made via Lovable will be committed automatically to this repo.
+The system architecture consists of a React-based frontend integrated with Monaco Editor for interactive code editing, connected to a FastAPI backend. The backend communicates with Docker-based sandbox containers for secure execution. Profiling tools, AST analyzers, and AI optimization modules operate within this architecture, and performance data is stored using PostgreSQL for tracking and analysis.
 
-**Use your preferred IDE**
+Codementor is built using Python, FastAPI, Docker, PostgreSQL, React.js, and Monaco Editor, along with AI integration for optimization and stress testing. Its primary goal is to help developers improve algorithm efficiency, understand performance trade-offs, and practice writing optimized, production-quality code in a secure and intelligent environment.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project stands out because it combines static complexity analysis, dynamic profiling, AI-driven optimization, and adversarial stress testing within a secure execution framework. Rather than functioning as a basic compiler, Codementor acts as an intelligent coding mentor that guides users toward better performance and cleaner algorithmic design.
